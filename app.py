@@ -2,6 +2,8 @@ from logging import info
 from flask import Flask,request,render_template
 import pickle
 
+from flask.templating import render_template_string
+
 app=Flask(__name__)
 
 @app.route('/')
@@ -21,5 +23,5 @@ def login():
         return render_template('login.html',info='Invalid Password')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True,host='0.0.0.0')
         

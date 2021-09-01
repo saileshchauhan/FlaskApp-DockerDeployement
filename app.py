@@ -7,7 +7,7 @@ app=Flask(__name__)
 @app.route('/')
 def get_user_login_details():
   return render_template("login.html")
-database={'nachi':'123','anderson':'456','samuel':'789'}   
+database={'sai':'123','anderson':'456','samuel':'789'}   
 
 @app.route('/form_login',methods=['POST','GET'])
 def login():
